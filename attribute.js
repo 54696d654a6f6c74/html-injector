@@ -1,4 +1,4 @@
-export class Attribute{
+class Attribute{
     constructor(name, value)
     {
         this.name = name;
