@@ -1,0 +1,11 @@
+{
+  "name": "html-ijector",
+  "version": "0.0.1",
+  "description": "Allows the creation of html templates that can injected into an HTML element.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eniz Hasan",
+  "license": "MIT"
+}
