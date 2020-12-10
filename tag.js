@@ -23,3 +23,5 @@ class Tag{
         return `<${this.tag}${atribsStr}> ` + content + ` </${this.tag}>`;
     }
 }
+
+module.exports = Tag;

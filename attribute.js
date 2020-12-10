@@ -10,3 +10,5 @@ class Attribute{
         return ` ${this.name}="${this.value}"`;
     }
 }
+
+module.exports = Attribute;
