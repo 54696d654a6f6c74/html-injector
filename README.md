@@ -3,7 +3,7 @@ A lightweight library that allows the creation of reusable HTML templates.
 
 ## Who is this for?
 - Those that want JSX without the bloat.
-- Those that hate seeing a triple digit lost dependcy list when isntalling a package.
+- Those that hate seeing a triple digit dependcy list when isntalling a package.
 - Those that need an HTML generator that's lightweight and extensible.
 
 ## Installation
