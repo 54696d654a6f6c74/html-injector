@@ -1,7 +1,7 @@
 {
   "name": "@54696d654a6f6c74/html-injector",
-  "version": "0.0.3",
-  "description": "Allows the creation of html templates thatn injected into an HTML element.",
+  "version": "0.0.4",
+  "description": "Allows the creation of HTML templates that are injected into an HTML element.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
