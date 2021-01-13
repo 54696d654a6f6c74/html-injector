@@ -20,7 +20,7 @@ class Tag{
         }
         else content = this.content;
 
-        return `<${this.tag}${atribsStr}> ` + content + ` </${this.tag}>`;
+        return `<${this.tag}${atribsStr}>` + content + `</${this.tag}>`;
     }
 }
 
