@@ -61,6 +61,21 @@ new Attribute("id", "main-page-container")]
 
 **Note that the attributes must be contained in a list ```[]```.**
 
+##### Injecting to the DOM
+
+Import the `Injector` module:
+
+```js
+const injector = require("@54696d654a6f6c74/html-injector").Injector;
+```
+
+Inject ```template``` into element with target ID "jolt"
+
+```js
+injector.bindHTML(template, "jolt");
+```
+**Note: The bind function can be used for a list of templates or list of targets with the same ```length``` as the list of templates.**
+
 ## Examples
 ### Nesting
 
