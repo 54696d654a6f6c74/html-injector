@@ -59,7 +59,7 @@ new Attribute("id", "main-page-container")]
 );
 ```
 
-Note that the attributes must be contained in a list ```[]```.
+**Note that the attributes must be contained in a list ```[]```.**
 
 ## Examples
 ### Nesting
