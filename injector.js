@@ -37,7 +37,7 @@ function createElement(tag)
     for(let i = 0; i < tag.atribs.length; i++)
     {
         var att = document.createAttribute(tag.atribs[i].name);
-        att.value = tag.atribs.value;
+        att.value = tag.atribs[i].value;
         ele.setAttributeNode(att);
     }
 
