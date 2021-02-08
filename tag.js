@@ -16,7 +16,11 @@ class Tag{
         
         if(Array.isArray(this.content)){
             for(let i = 0; i < this.content.length; i++)
-                content += this.content[i].stringify;
+            {
+                if(typeof(this.content[i]) === 'string' || content instanceof String)
+                    content += this.content[i];
+                else content += this.content[i].stringify;
+            }
         }
         else content = this.content;
 

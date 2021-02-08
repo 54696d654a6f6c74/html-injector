@@ -41,7 +41,19 @@ function createElement(tag)
         ele.setAttributeNode(att);
     }
 
-    ele.innerHTML = tag.content;
+    if(typeof(tag.content) === 'string' || tag.content instanceof String)
+        ele.innerHTML = tag.content;
+    else if(Array.isArray(tag.content))
+    {
+        for(let i = 0; i < tag.content.length; i++)
+        {
+            if(typeof(tag.content[i]) === 'string' || tag.content[i] instanceof String)
+                ele.innerHTML += tag.content[i];
+            else
+                ele.appendChild(createElement(tag.content[i]));
+        }
+    }
+    else throw new Error("Tag content must be string or array");
 
     return ele;
 }
@@ -53,6 +65,8 @@ function bindHTML(injection, target) {
         for(let i = 0; i < injection.length; i++)
             elems.push(createElement(injection[i]));
 
+        console.log(elems);
+
         if(Array.isArray(target))
         {
             if(target.length != injection.length)
@@ -62,7 +76,7 @@ function bindHTML(injection, target) {
         }
         else{
             for(let i = 0; i < elems.length; i++)
-            document.getElementById(target).appendChild(elems[i]);
+                document.getElementById(target).appendChild(elems[i]);
         }
     }
 
