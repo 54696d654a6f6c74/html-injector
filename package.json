@@ -1,6 +1,6 @@
 {
   "name": "@54696d654a6f6c74/html-injector",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Allows the creation of HTML templates that are injected into an HTML element.",
   "main": "index.js",
   "scripts": {
