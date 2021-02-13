@@ -63,9 +63,21 @@ function bindHTML(injection, target) {
     {
         var elems = [];
         for(let i = 0; i < injection.length; i++)
-            elems.push(createElement(injection[i]));
+        {
+            if(Array.isArray(injection[i]))
+            {
+                if(Array.isArray(target))
+                {
+                    if(target.length != injection.length)
+                        throw new Error("The the amount of targets must match the amount of injections!");
+                    
+                    bindHTML(injection[i], target[i]);
+                }
 
-        console.log(elems);
+                else bindHTML(injection[i], target);
+            }
+            else elems.push(createElement(injection[i]));
+        }
 
         if(Array.isArray(target))
         {
