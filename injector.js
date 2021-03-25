@@ -1,35 +1,12 @@
-/**
- * @deprecated Use bindHTML instead. This function will be removed in a future version!
- */
-function injectHTML(injection, target)
-{
-    if(Array.isArray(injection))
-    {
-        for(let i = 0; i < injection.length; i++)
-            document.getElementById(target).innerHTML += injection[i].stringify;
-    }
-    else
-    {
-        document.getElementById(target).innerHTML += injection.stringify;
-    }
-}
+// Import purely for documentation purposes
+import Tag from "./tag.js";
 
 /**
- * @deprecated Use bindHTML instead. This function will be removed in a future version!
+ * Converts Tag object into DOM Element object
+ * 
+ * @param {Tag} tag 
+ * @returns {Element} DOM Element object
  */
-function injectHTMLTop(injection, target)
-{
-    if(Array.isArray(injection))
-    {
-        for(let i = 0; i < injection.length; i++)
-            document.getElementById(target).innerHTML = injection[i].stringify + document.getElementById(target).innerHTML;
-    }
-    else
-    {
-        document.getElementById(target).innerHTML = injection.stringify + document.getElementById(target).innerHTML;
-    }
-}
-
 function createElement(tag)
 {
     var ele = document.createElement(tag.tag);
@@ -58,6 +35,12 @@ function createElement(tag)
     return ele;
 }
 
+/**
+ * Appends passed Tag objects to the DOM at specifed target locations
+ * 
+ * @param {Tag | [Tag]} injection 
+ * @param {string | [string]} target 
+ */
 function bindHTML(injection, target) {
     if(Array.isArray(injection))
     {
