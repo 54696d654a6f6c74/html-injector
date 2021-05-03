@@ -103,3 +103,25 @@ new Tag("div", [
     new Tag("button", "Option 2", [new Attribute("onclick" , `select(${counter++})`)])
 ]);
 ```
+
+##### Alternate version
+Allows to bind a function to an onclick even via reference. Useful when working with js modules.
+```js
+function select()
+{
+  console.log(this.value);
+}
+
+let counter = 0;
+test_template = 
+new Tag("div", [
+    new Tag("button", "Option 1", [
+        new Attribute("onclick", select),
+        new Attribute("value", counter++)
+    ]),
+    new Tag("button", "Option 2", [
+        new Attribute("onclick", select),
+        new Attribute("value", counter++)
+    ])
+])
+```
