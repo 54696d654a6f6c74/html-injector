@@ -9,7 +9,7 @@ const helpers = require("./helpers.js");
 function createElement(tag)
 {
     var ele = document.createElement(tag.tag);
-    
+
     for(let i = 0; i < tag.atribs.length; i++)
     {
         var att = undefined;

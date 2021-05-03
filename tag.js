@@ -1,7 +1,7 @@
 class Tag{
-    constructor(tag, content, atribs){
+    constructor(tag, content, atribs = undefined){
         this.tag = tag;
-        this.atribs = atribs;
+        this.atribs = atribs ?? [];
         this.content = content;
     }
 
