@@ -1,3 +1,5 @@
+const helpers = require("./helpers.js");
+
 /**
  * Converts Tag object into DOM Element object
  * 
@@ -10,9 +12,21 @@ function createElement(tag)
     
     for(let i = 0; i < tag.atribs.length; i++)
     {
-        var att = document.createAttribute(tag.atribs[i].name);
-        att.value = tag.atribs[i].value;
-        ele.setAttributeNode(att);
+        var att = undefined;
+
+        switch(tag.atribs[i].name)
+        {
+            case "onclick":
+                helpers.bindOnclick(tag.atribs[i].value, ele);
+            break;
+
+            default:
+                att = document.createAttribute(tag.atribs[i].name);
+                att.value = tag.atribs[i].value;
+        }
+
+        if (att != undefined)
+            ele.setAttributeNode(att);
     }
 
     if(typeof(tag.content) === 'string' || tag.content instanceof String)
