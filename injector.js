@@ -1,6 +1,3 @@
-// Import purely for documentation purposes
-import Tag from "./tag.js";
-
 /**
  * Converts Tag object into DOM Element object
  * 
@@ -83,7 +80,6 @@ function bindHTML(injection, target) {
     }
 }
 
-module.exports = { injectHTML: injectHTML,
-                   injectHTMLTop: injectHTMLTop,
-                   bindHTML
+module.exports = { 
+    bindHTML
 };
