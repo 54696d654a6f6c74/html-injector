@@ -8,7 +8,7 @@
     "require": "./dist/lib.node.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx webpack"
   },
   "author": "Eniz Hasan",
   "license": "MIT",
