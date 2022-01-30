@@ -8,11 +8,11 @@ const helpers = require("./helpers.js");
  */
 function createElement(tag)
 {
-    var ele = document.createElement(tag.tag);
+    const ele = document.createElement(tag.tag);
 
     for(let i = 0; i < tag.atribs.length; i++)
     {
-        var att = undefined;
+        let att;
         let ref = tag.atribs[i];
 
         if(ref.name == "onclick" && typeof(ref.value) !== 'string')
@@ -54,7 +54,7 @@ function createElement(tag)
 function bindHTML(injection, target) {
     if(Array.isArray(injection))
     {
-        var elems = [];
+        const elems = [];
         for(let i = 0; i < injection.length; i++)
         {
             if(Array.isArray(injection[i]))
@@ -87,7 +87,7 @@ function bindHTML(injection, target) {
 
     else
     {
-        var elem = createElement(injection);
+        const elem = createElement(injection);
 
         document.getElementById(target).appendChild(elem);
     }
