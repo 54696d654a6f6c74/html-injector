@@ -10,6 +10,11 @@ A lightweight library that allows the creation of reusable HTML templates.
 #### npm
 <code>npm install 54696d654a6f6c74/html-injector</code>
 
+#### Browser
+```js
+import injector from "https://unpkg.com/@54696d654a6f6c74/html-injector@1.0.1/dist/lib.js"
+```
+
 ## Usage
 
 The recommended way of using this lib is to have JS files that hold <code>const</code> values that act as HTML.
